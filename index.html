@@ -4,92 +4,299 @@
 
 <head>
 	<title></title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!-- Load css styles -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" /> 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/pluton.css" />
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+	<style>
+		#conteudo {
+			background-color: rgba(20, 30, 40, 0.2);
+			border-radius: 3%;
+			width: 95%;
+			margin: auto;
+			box-shadow: 9px 7px 12px 0px #0000003b;
+			background-image: linear-gradient(-35deg, rgba(0, 123, 255, 0.25), #17a2b8);
+		}
+
+		header {
+			background-image: linear-gradient(360deg, #17a2b800, #6317b873);
+			font-family: 'Quicksand', sans-serif;
+		}
+
+		#Home {
+			padding: 10px;
+			background-color: #e9ecef9e;
+			margin: 50px 5px;
+			border-radius: 8px;
+			box-shadow: 8px 2px 3px #6c757d1a;
+			opacity: 0.8;
+		}
+
+		#formac {
+			padding: 10px;
+			background-color: #e9ecef9e;
+			margin: 50px 5px;
+			border-radius: 8px;
+			box-shadow: 8px 2px 3px #6c757d1a;
+			opacity: 0.8;
+		}
+
+		#contato {
+    /* FONT-WEIGHT: 200; */
+    /* padding: 10px; */
+    margin: 20px 5px;
+    border-radius: 8px;
+    
+	opacity: 0.8;
+	
+
+		}
+		#contato h3{
+			color: black;
+		}
+
+		#habilidades {
+			border-radius: 8px;
+			box-shadow: 8px 2px 3px #6c757d1a;
+		}
+
+		#formac h3, #contato h3 {
+			position: relative;
+			margin: -31px 0px 0px 0px!important;
+		}
+
+		#Home h3 {
+			position: relative;
+			margin: -11px 0px 0px 0px;
+
+		}
+
+		strong {
+			color: #2a464afa;
+		}
+
+		#foto-igor {
+			width: 159px;
+			margin: 10px;
+			vertical-align: middle;
+			border: solid 1px #117a8b;
+			box-shadow: 5px 2px 11px 0px #00000066;
+}
+		.bg-light {
+    	background-color: #bed5ff!important;
+}
+		.primary-section {
+    	background: no-repeat;
+}
+		.section .container {
+    	padding-top: 0px;
+}
+		.container {
+		width: 2000px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+}
+
+		.skills li {
+		margin-bottom: 30px;
+		background: #ffffff73;
+		height: 40px;
+		padding: 0px;
+		border-radius: 10px 10px;
+		box-shadow: 5px 5px 12px #545b628a;
+}
+		.skills li .bar {
+			height: 40px;
+			position: absolute;
+			background-image: linear-gradient(-35deg, #fece1af5, #0088cc);
+}
+		.section {
+			padding-bottom: 0px;
+}
+
+		h2{
+			color: black;
+		}
+
+.first-box{padding:10px;background:#9eaadc;}
+.second-box{padding:10px; background:#69a6d0;}
+
+	</style>
 </head>
 
 <body>
-	<div style="background-color: rgba(20, 30, 40, 0.2);border-radius: 3%; width: 50%; margin-left: 20%;">
-		<table>
-			<tr>
-				<td><img src="igor.jpg" width="100px" style="border-radius: 100%; " alt="Minha foto pessoal"></td>
-				<td>
-					<h1 style="padding-left: 30px;"> Igor Giamoniano Pereira</h1>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><a href="#port">Portifolio</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>Estudante de desenvolvimento de software Full-Stack na Trybe, formado em Sistemas para Internet na
-					Faculdade Sumaré<br>
-					Atualmente aluno de pós graduação em <strong> Ciência de dados, Big Data e IOT.</strong></p>
-					<br>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<Ul>
-						<li>Cidade: <em>São Paulo</em></li>
-						<li>Estado: <em>SP</em></li>
-						<li>Nacionalidade: <em>Brasileiro</em></li>
 
-					</Ul>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
+	<div id="conteudo">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">IG</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#formac">Formação</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#habi">Habilidades e competências</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contato">Contato</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<header>
+			<table>
+				<tr>
+					<td><img id="foto-igor" src="igor.jpg" width="100px" style="border-radius: 100%; "
+							alt="Minha foto pessoal"></td>
+					<td>
+						<h1 style="padding-left: 30px;"> Igor Giamoniano Pereira</h1>
+					</td>
+				</tr>
+			</table>
+		</header>
+
+		<div id="Home">
+			<table>
+				<tr>
+					<td></td>
+					<td>
+						<h3>About Me</h3><br>
+						Tenho paixão por tecnologia e trabalhar com pessoas.<br>
+						Trabalhei como webdesigner e designer gráfico freelance durante toda minha jornada,
+						adquiri experiência passando por diversas funções que exigem contato com o cliente o que
+						fortaleceu meu 'know how' nesse setor
+						e me levou diretamente a área de ensino como professor.<br>
+						Atualmente desenvolvo competências para estar alinhado com as novas tecnologias do mercado.
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="formac">
+			<table>
+				<tr>
+					<td><br>
+						<h3>Formação: </h3><br>
+						<Ul>
+							<li><strong>Técnico</strong> em Produção de Multimeios - <em> SENAC - SP</em></li>
+							<li><strong>Superior</strong> em Sistemas para Internet - <em>Centro Universitário
+									Sumaré</em></li>
+							<li><strong>Pós-graduação</strong> em Ciência de Dados, Big Data e IOT - <em>Centro
+									Universitário Sumaré</em></li>
+							<li><strong>Formação</strong> em Desenvolvedor Web Full-Stack - <em> Trybe</em></li>
+				</tr>
+			</table>
+		</div>
+
+		<div id="habi">
+			<div class="section primary-section" id="about">
+				<div class="container">
+					<div class="row-fluid team">
+						
+	
+					<h3><p align="center"><span style="color: rgba(20, 30, 40, 0.9);">Habilidades e competências</span></p></h3>
+					<div class="row-fluid">
+						<div class="span6">
+							<ul class="skills">
+								<li>
+									<span class="bar" data-width="90%"></span>
+									<h3>Design Gráfico</h3>
+								</li>
+								<li>
+									<span class="bar" data-width="85%"></span>
+									<h3>Html & Css</h3>
+								</li>
+								<li>
+									<span class="bar" data-width="68%"></span>
+									<h3>JavaScript</h3>
+								</li>
+								<li>
+									<span class="bar" data-width="70%"></span>
+									<h3>Wordpress</h3>
+								</li>
+							</ul>
+							
+						</div>
+						
+					</div>
+					
+				</div>
 				
-				<td><br>Habilidades: <br>
-					<Ul>
-						<li>Adobe Photoshop - <em>Avançado</em></li>
-						<li>Adobe Illustrator - <em>Avançado</em></li>
-						<li>Front End - <em>Intermediario</em></li>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-					</Ul>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
+			</div>
 
-				<td><div id="port"> <a href="https://www.behance.net/igorgiamoniano">Behance</a> - <a
-						href="https://www.linkedin.com/in/igorgiamoniano/">Linkdin</a></div></td>
-			</tr>
-		</table>
+
+	<div id="contato" class="container">
+		<center><h2 style="color: black;">Contato</h2><br></center>
+			<div class="row text-center">
+				<div class="col-sm-6 col-xs-6 first-box">
+				<h1><span class="glyphicon glyphicon-earphone"></span></h1>
+				<h2>Phone</h2>
+				<p>(11) 95984-1164</p><br>
+			</div>
+			<div class="col-sm-6 col-xs-6 second-box">
+				<h1><span class="glyphicon glyphicon-send"></span></h1>
+				<h2>E-mail</h2>
+				<p>igorgphotoarte@gmail.com</p><br>
+			</div>
+
+			</div>
+		</div>
+
+	<div class="footer">
+		<p>&copy; 2020 Design by <a href="http://igorgbr.github.io">IG</a></p>
 	</div>
+	        <!-- Include javascript -->
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+			<script type="text/javascript" src="js/bootstrap.js"></script>
+			<script type="text/javascript" src="js/modernizr.custom.js"></script>
+			<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+			<script type="text/javascript" src="js/jquery.cslider.js"></script>
+			<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+			<script type="text/javascript" src="js/jquery.inview.js"></script>
+			<!-- css3-mediaqueries.js for IE8 or older -->
+			<!--[if lt IE 9]>
+				<script src="js/respond.min.js"></script>
+			<![endif]-->
+			<script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
