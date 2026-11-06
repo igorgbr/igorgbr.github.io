@@ -471,8 +471,8 @@ const particles = (() => {
   function draw() {
     if (!home.classList.contains('active') || document.hidden) { raf = 0; return; }
     ctx.clearRect(0, 0, w, h);
-    flow.x += (flow.tx - flow.x) * .03;
-    flow.y += (flow.ty - flow.y) * .03;
+    flow.x += (flow.tx - flow.x) * .05;
+    flow.y += (flow.ty - flow.y) * .05;
     for (const p of pts) {
       p.x = (p.x + p.vx + flow.x + w + 16) % (w + 16) - 8;
       p.y = (p.y + p.vy + flow.y + h + 16) % (h + 16) - 8;
@@ -495,7 +495,7 @@ const particles = (() => {
     window.addEventListener('pointermove', e => {
       const r = canvas.getBoundingClientRect();
       const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
-      const d = Math.hypot(dx, dy) || 1, speed = .45;
+      const d = Math.hypot(dx, dy) || 1, speed = .5 + 1.5 * Math.min(1, d / (r.width / 2)); // farther from centre = faster
       flow.tx = dx / d * speed; flow.ty = dy / d * speed;
     });
     document.addEventListener('visibilitychange', () => particles.start());
