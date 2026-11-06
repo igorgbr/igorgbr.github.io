@@ -457,6 +457,8 @@ const particles = (() => {
   const ctx = canvas.getContext('2d');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let w = 0, h = 0, raf = 0, pts = [];
+  // Shared drift that eases toward the mouse direction (from the canvas centre).
+  const flow = { x: 0, y: 0, tx: 0, ty: 0 };
   const rnd = (a, b) => a + Math.random() * (b - a);
   function resize() {
     const dpr = Math.min(devicePixelRatio || 1, 1.6);
@@ -469,9 +471,11 @@ const particles = (() => {
   function draw() {
     if (!home.classList.contains('active') || document.hidden) { raf = 0; return; }
     ctx.clearRect(0, 0, w, h);
+    flow.x += (flow.tx - flow.x) * .03;
+    flow.y += (flow.ty - flow.y) * .03;
     for (const p of pts) {
-      p.x = (p.x + p.vx + w + 16) % (w + 16) - 8;
-      p.y = (p.y + p.vy + h + 16) % (h + 16) - 8;
+      p.x = (p.x + p.vx + flow.x + w + 16) % (w + 16) - 8;
+      p.y = (p.y + p.vy + flow.y + h + 16) % (h + 16) - 8;
       p.ph += .008;
     }
     ctx.lineWidth = .7;
@@ -488,6 +492,12 @@ const particles = (() => {
   }
   if (!reduced) {
     new ResizeObserver(resize).observe(canvas);
+    window.addEventListener('pointermove', e => {
+      const r = canvas.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+      const d = Math.hypot(dx, dy) || 1, speed = .45;
+      flow.tx = dx / d * speed; flow.ty = dy / d * speed;
+    });
     document.addEventListener('visibilitychange', () => particles.start());
   }
   return { start() { if (!reduced && !raf) raf = requestAnimationFrame(draw); } };
